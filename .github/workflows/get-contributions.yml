@@ -1,0 +1,45 @@
+name: Fetch Contributions
+
+on:
+  workflow_dispatch:
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Fetch GitHub contribution calendar
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: |
+          mkdir -p data
+
+          gh api graphql \
+            -f query='
+              query($login: String!) {
+                user(login: $login) {
+                  contributionsCollection {
+                    contributionCalendar {
+                      totalContributions
+                      weeks {
+                        contributionDays {
+                          date
+                          contributionCount
+                          contributionLevel
+                          color
+                          weekday
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            ' \
+            -f login='diptim06' \
+            > data/contributions.json
+
+      - name: Show result
+        run: cat data/contributions.json
