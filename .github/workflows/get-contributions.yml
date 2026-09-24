@@ -3,6 +3,9 @@ name: Fetch Contributions
 on:
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   fetch:
     runs-on: ubuntu-latest
@@ -41,5 +44,14 @@ jobs:
             -f login='diptim06' \
             > data/contributions.json
 
-      - name: Show result
-        run: cat data/contributions.json
+      - name: Save contribution data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add data/contributions.json
+
+          git diff --cached --quiet || \
+            git commit -m "Update contribution data"
+
+          git push
