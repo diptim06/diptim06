@@ -1,11 +1,4 @@
 
-Dipti Mishra
----------------
-
-The bug is me, or am i the bug?
-![Ghast Contributions](./assets/ghast-contributions.gif)
-
-
 <div align="center">
   <img src="./sections/hero.svg" width="100%" alt="Dipti Mishra — Developer" />
 </div>
@@ -19,4 +12,6 @@ The bug is me, or am i the bug?
 
 <br/>
 
+The bug is me, or am i the bug?
+![Ghast Contributions](./assets/ghast-contributions.gif)
 
