@@ -374,19 +374,34 @@ def move_toward(
     return nx, ny, False, dx, dy
 
 
+
 def choose_target(
     map_layer: ContributionMapLayer,
     painted: set[str],
-    rng: random.Random,
+    ghast_x: float,
+    ghast_y: float,
 ) -> Optional[Target]:
+    """Choose the unhit contribution cell nearest to the Ghast."""
+
     candidates = [
         day for day in map_layer.active_days
         if day.date not in painted
     ]
+
     if not candidates:
         return None
 
-    day = rng.choice(candidates)
+    def travel_cost(day: Day) -> tuple[float, str]:
+        staging_x, staging_y = target_staging_position(
+            day, ghast_x, map_layer
+        )
+        distance = math.hypot(
+            staging_x - ghast_x,
+            staging_y - ghast_y,
+        )
+        return distance, day.date
+
+    day = min(candidates, key=travel_cost)
     x, y = map_layer.cell_center(day.column, day.row)
     return Target(day=day, x=x, y=y)
 
@@ -408,7 +423,9 @@ def build_animation() -> list[Image.Image]:
 
     painted: dict[str, str] = {}
     paint_order: list[str] = []
-    target = choose_target(map_layer, set(), rng)
+    target = choose_target(
+    map_layer, set(), ghast_x, ghast_y
+)
 
     phase = "move"
     cooldown = 0.0
@@ -518,7 +535,9 @@ def build_animation() -> list[Image.Image]:
                     phase = "happy_return"
                 else:
                     cooldown = COOLDOWN_SECONDS
-                    target = choose_target(map_layer, set(painted), rng)
+                    target = choose_target(
+    map_layer, set(painted), ghast_x, ghast_y
+)
                     phase = "cooldown"
 
         elif phase == "cooldown":
@@ -603,7 +622,9 @@ def build_animation() -> list[Image.Image]:
                 painted.clear()
                 paint_order.clear()
                 completed = 0
-                target = choose_target(map_layer, set(), rng)
+                target = choose_target(
+                    map_layer, set(), ghast_x, ghast_y
+                )
                 phase = "move"
                 happy_elapsed = 0.0
 
