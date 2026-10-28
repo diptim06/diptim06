@@ -1,0 +1,44 @@
+from pathlib import Path
+
+OUT = Path(__file__).resolve().parent / "ghast.svg"
+
+SVG = """<svg xmlns="http://www.w3.org/2000/svg"
+width="64" height="64" viewBox="0 0 64 64"
+shape-rendering="crispEdges">
+
+  <!-- BODY -->
+  <rect x="10" y="8" width="44" height="36" fill="#f2f2f2"/>
+  <rect x="13" y="5" width="38" height="3" fill="#ffffff"/>
+  <rect x="7" y="12" width="3" height="28" fill="#d9d9d9"/>
+  <rect x="54" y="12" width="3" height="28" fill="#d9d9d9"/>
+  <rect x="13" y="44" width="38" height="3" fill="#d0d0d0"/>
+
+  <!-- EYES -->
+  <rect x="18" y="20" width="8" height="8" fill="#ffffff"/>
+  <rect x="20" y="22" width="5" height="5" fill="#c91f26"/>
+
+  <rect x="38" y="20" width="8" height="8" fill="#ffffff"/>
+  <rect x="39" y="22" width="5" height="5" fill="#c91f26"/>
+
+  <!-- MOUTH -->
+  <rect x="25" y="31" width="14" height="8" fill="#3b1c1c"/>
+  <rect x="28" y="34" width="8" height="5" fill="#111111"/>
+
+  <!-- TENTACLES -->
+  <rect x="12" y="44" width="7" height="11" fill="#eeeeee"/>
+  <rect x="14" y="55" width="4" height="4" fill="#d2d2d2"/>
+
+  <rect x="22" y="44" width="7" height="8" fill="#eeeeee"/>
+  <rect x="24" y="52" width="4" height="6" fill="#d2d2d2"/>
+
+  <rect x="32" y="44" width="7" height="12" fill="#eeeeee"/>
+  <rect x="34" y="56" width="4" height="4" fill="#d2d2d2"/>
+
+  <rect x="42" y="44" width="7" height="9" fill="#eeeeee"/>
+  <rect x="43" y="53" width="4" height="6" fill="#d2d2d2"/>
+
+</svg>
+"""
+
+OUT.write_text(SVG, encoding="utf-8")
+print(f"Created {OUT}")

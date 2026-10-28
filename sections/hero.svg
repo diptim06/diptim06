@@ -1,0 +1,36 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300">
+  <defs>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#9EFF69" stroke-opacity=".055"/>
+    </pattern>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#9EFF69"/>
+      <stop offset="100%" stop-color="#9EFF69" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="300" rx="12" fill="#080B08"/>
+  <rect width="1200" height="300" rx="12" fill="url(#grid)"/>
+  <rect x="1" y="1" width="1198" height="298" rx="11" fill="none" stroke="#9EFF69" stroke-opacity=".3"/>
+
+  <g font-family="monospace">
+    <circle cx="32" cy="30" r="4" fill="#9EFF69"/>
+    <text x="46" y="34" font-size="12" fill="#9EFF69">dipti@github:~</text>
+    <text x="1165" y="34" font-size="12" text-anchor="end" fill="#9EFF69" opacity=".6">DEVELOPER PROFILE</text>
+
+    <text x="64" y="108" font-size="15" fill="#9EFF69">&gt; hello, world.</text>
+    <text x="60" y="170" font-size="54" font-weight="700" letter-spacing="-2" fill="#F2F7EF">DIPTI MISHRA</text>
+    <rect x="64" y="190" width="1072" height="1" fill="url(#line)"/>
+
+    <text x="64" y="222" font-size="18" fill="#9EFF69">Software Developer</text>
+    <text x="250" y="222" font-size="18" fill="#6E7D69">·</text>
+    <text x="278" y="222" font-size="18" fill="#C3CCC0">Problem Solver</text>
+
+    <text x="64" y="258" font-size="14" fill="#9AA797">Building useful things, learning constantly, improving one commit at a time.</text>
+
+    <rect x="1135" y="246" width="5" height="17" rx="1" fill="#9EFF69">
+      <animate attributeName="opacity" values="1;0.25;1" dur="1.4s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+</svg>

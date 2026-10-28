@@ -1,0 +1,19 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="245" viewBox="0 0 1200 245">
+  <rect width="1200" height="245" rx="10" fill="#080B08" stroke="#30452B"/>
+  <g font-family="monospace">
+    <circle cx="28" cy="28" r="4" fill="#9EFF69"/>
+    <text x="42" y="32" font-size="13" fill="#9EFF69">dipti@github:~/about</text>
+    <path d="M24 49H1176" stroke="#30452B"/>
+
+    <text x="36" y="88" font-size="25" font-weight="700" fill="#F2F7EF">ABOUT ME</text>
+    <rect x="36" y="101" width="65" height="3" rx="1.5" fill="#9EFF69"/>
+
+    <text x="36" y="137" font-size="16" fill="#B9C5B4">Computer Science student who enjoys turning ideas into practical software.</text>
+    <text x="36" y="165" font-size="16" fill="#B9C5B4">I explore development, algorithms, and new technologies by building projects</text>
+    <text x="36" y="193" font-size="16" fill="#B9C5B4">that help me learn, solve problems, and get better with every iteration.</text>
+
+    <text x="36" y="222" font-size="12" fill="#9EFF69">BUILD  /  LEARN  /  IMPROVE</text>
+    <text x="1160" y="222" font-size="12" text-anchor="end" fill="#71816B">STATUS: LEARNING</text>
+  </g>
+</svg>
