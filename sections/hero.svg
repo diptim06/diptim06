@@ -27,7 +27,7 @@
     <text x="250" y="222" font-size="18" fill="#6E7D69">·</text>
     <text x="278" y="222" font-size="18" fill="#C3CCC0">Problem Solver</text>
 
-    <text x="64" y="258" font-size="14" fill="#9AA797">Building useful things, learning constantly, improving one commit at a time.</text>
+    <text x="64" y="258" font-size="14" fill="#9EFF69">DESIGNING. BUILDING. BREAKING. IMPROVING.</text>
 
     <rect x="1135" y="246" width="5" height="17" rx="1" fill="#9EFF69">
       <animate attributeName="opacity" values="1;0.25;1" dur="1.4s" repeatCount="indefinite"/>
