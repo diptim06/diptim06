@@ -1,0 +1,175 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="490" viewBox="0 0 1200 490">
+  <defs>
+    <!-- Background subtle gradient -->
+    <linearGradient id="card-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.014"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.002"/>
+    </linearGradient>
+
+    <!-- Glass card surface glow / lighting -->
+    <linearGradient id="glass-spec" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3ad7ff" stop-opacity="0.035"/>
+      <stop offset="50%" stop-color="#24f0a7" stop-opacity="0.008"/>
+      <stop offset="100%" stop-color="#24f0a7" stop-opacity="0.02"/>
+    </linearGradient>
+
+    <!-- Project thumbnail backgrounds -->
+    <linearGradient id="thumb-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#39ff79" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#39ff79" stop-opacity="0.012"/>
+    </linearGradient>
+
+    <style>
+      .sec-title {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-size: 22px;
+        font-weight: 700;
+        fill: #e9f7f2;
+        letter-spacing: -0.028em;
+      }
+      .sec-subtitle {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-size: 11px;
+        font-weight: 400;
+        fill: #7f9a98;
+      }
+      .project-title {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        fill: #e9f7f2;
+        letter-spacing: -0.02em;
+      }
+      .project-tag-text {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-size: 9.5px;
+        font-weight: 500;
+        fill: #9db0b7;
+      }
+      .project-desc {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-size: 13.5px;
+        font-weight: 400;
+        fill: #7f9a98;
+      }
+      .project-stack {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-size: 10.5px;
+        font-weight: 400;
+        fill: #b7c8ce;
+      }
+      .project-thumb-emoji {
+        font-size: 28px;
+        text-anchor: middle;
+        dominant-baseline: central;
+      }
+    </style>
+  </defs>
+
+  <!-- Section Header -->
+  <g transform="translate(2, 0)">
+    <text x="0" y="24" class="sec-title">🚀 Featured Projects</text>
+    <text x="1196" y="24" text-anchor="end" class="sec-subtitle">things I've actually built</text>
+  </g>
+
+  <!-- Main Card Shell (height: 450) -->
+  <g transform="translate(0, 38)">
+    <rect x="1" y="1" width="1198" height="448" rx="18" ry="18" fill="rgba(2, 8, 12, 0.84)"/>
+    <rect x="1" y="1" width="1198" height="448" rx="18" ry="18" fill="url(#card-grad)"/>
+    <rect x="1" y="1" width="1198" height="448" rx="18" ry="18" fill="url(#glass-spec)"/>
+
+    <!-- Subtle base border -->
+    <rect x="1" y="1" width="1198" height="448" rx="18" ry="18" fill="none"
+          stroke="rgba(57, 255, 121, 0.24)" stroke-width="1.2"/>
+
+    <!-- ===================================================================
+         ROW 1: Toolloom (y: 0 to 150)
+         =================================================================== -->
+    <g transform="translate(0, 0)">
+      <!-- Thumbnail -->
+      <g transform="translate(24, 39)">
+        <rect width="72" height="72" rx="16" ry="16" fill="rgba(5, 13, 18, 0.92)" stroke="rgba(57, 255, 121, 0.13)" stroke-width="1"/>
+        <rect width="72" height="72" rx="16" ry="16" fill="url(#thumb-grad)"/>
+        <text x="36" y="38" class="project-thumb-emoji">🛠️</text>
+      </g>
+
+      <!-- Info -->
+      <g transform="translate(116, 40)">
+        <!-- Heading + Tag -->
+        <text x="0" y="22" class="project-title">Toolloom</text>
+        <g transform="translate(90, 7)">
+          <rect width="144" height="20" rx="10" ry="10" fill="rgba(57, 255, 121, 0.018)" stroke="rgba(57, 255, 121, 0.10)" stroke-width="1"/>
+          <text x="72" y="14" text-anchor="middle" class="project-tag-text">Developer Tool · In Progress</text>
+        </g>
+
+        <!-- Description -->
+        <text x="0" y="47" class="project-desc">A VS Code extension that transforms npm packages into AI-ready MCP tools.</text>
+
+        <!-- Stack -->
+        <text x="0" y="69" class="project-stack">TypeScript · VS Code API · Node.js</text>
+      </g>
+    </g>
+
+    <!-- Divider 1 -->
+    <line x1="20" y1="150" x2="1180" y2="150" stroke="rgba(57, 255, 121, 0.08)" stroke-width="1"/>
+
+    <!-- ===================================================================
+         ROW 2: ClosetBrain (y: 150 to 300)
+         =================================================================== -->
+    <g transform="translate(0, 150)">
+      <!-- Thumbnail -->
+      <g transform="translate(24, 39)">
+        <rect width="72" height="72" rx="16" ry="16" fill="rgba(5, 13, 18, 0.92)" stroke="rgba(57, 255, 121, 0.13)" stroke-width="1"/>
+        <rect width="72" height="72" rx="16" ry="16" fill="url(#thumb-grad)"/>
+        <text x="36" y="38" class="project-thumb-emoji">🧠</text>
+      </g>
+
+      <!-- Info -->
+      <g transform="translate(116, 40)">
+        <!-- Heading + Tag -->
+        <text x="0" y="22" class="project-title">ClosetBrain</text>
+        <g transform="translate(110, 7)">
+          <rect width="158" height="20" rx="10" ry="10" fill="rgba(57, 255, 121, 0.018)" stroke="rgba(57, 255, 121, 0.10)" stroke-width="1"/>
+          <text x="79" y="14" text-anchor="middle" class="project-tag-text">Full-stack · Cloud · In Progress</text>
+        </g>
+
+        <!-- Description -->
+        <text x="0" y="47" class="project-desc">A smart wardrobe platform with garment management, cloud image storage, and wardrobe-based outfit generation.</text>
+
+        <!-- Stack -->
+        <text x="0" y="69" class="project-stack">React · TypeScript · Express · MongoDB · Cloudflare R2</text>
+      </g>
+    </g>
+
+    <!-- Divider 2 -->
+    <line x1="20" y1="300" x2="1180" y2="300" stroke="rgba(57, 255, 121, 0.08)" stroke-width="1"/>
+
+    <!-- ===================================================================
+         ROW 3: SoloSaathi (y: 300 to 450)
+         =================================================================== -->
+    <g transform="translate(0, 300)">
+      <!-- Thumbnail -->
+      <g transform="translate(24, 39)">
+        <rect width="72" height="72" rx="16" ry="16" fill="rgba(5, 13, 18, 0.92)" stroke="rgba(57, 255, 121, 0.13)" stroke-width="1"/>
+        <rect width="72" height="72" rx="16" ry="16" fill="url(#thumb-grad)"/>
+        <text x="36" y="38" class="project-thumb-emoji">💃</text>
+      </g>
+
+      <!-- Info -->
+      <g transform="translate(116, 40)">
+        <!-- Heading + Tag -->
+        <text x="0" y="22" class="project-title">SoloSaathi</text>
+        <g transform="translate(102, 7)">
+          <rect width="170" height="20" rx="10" ry="10" fill="rgba(57, 255, 121, 0.018)" stroke="rgba(57, 255, 121, 0.10)" stroke-width="1"/>
+          <text x="85" y="14" text-anchor="middle" class="project-tag-text">Internship · Frontend Development</text>
+        </g>
+
+        <!-- Description -->
+        <text x="0" y="47" class="project-desc">Contributed to a Garba-focused platform connecting solo participants and groups to find dance circles.</text>
+
+        <!-- Stack -->
+        <text x="0" y="69" class="project-stack">React · JavaScript · React Router</text>
+      </g>
+    </g>
+  </g>
+</svg>

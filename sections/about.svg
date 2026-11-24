@@ -1,19 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320">
+  <defs>
+    <!-- Background subtle gradient -->
+    <linearGradient id="card-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.014"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.002"/>
+    </linearGradient>
 
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="245" viewBox="0 0 1200 245">
-  <rect width="1200" height="245" rx="10" fill="#080B08" stroke="#30452B"/>
-  <g font-family="monospace">
-    <circle cx="28" cy="28" r="4" fill="#9EFF69"/>
-    <text x="42" y="32" font-size="13" fill="#9EFF69">dipti@github:~/about</text>
-    <path d="M24 49H1176" stroke="#30452B"/>
+    <!-- Glass card surface glow / lighting -->
+    <linearGradient id="glass-spec" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3ad7ff" stop-opacity="0.035"/>
+      <stop offset="50%" stop-color="#24f0a7" stop-opacity="0.008"/>
+      <stop offset="100%" stop-color="#24f0a7" stop-opacity="0.02"/>
+    </linearGradient>
 
-    <text x="36" y="88" font-size="25" font-weight="700" fill="#F2F7EF">ABOUT ME</text>
-    <rect x="36" y="101" width="65" height="3" rx="1.5" fill="#9EFF69"/>
+    <style>
+      .kicker {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.17em;
+        text-transform: uppercase;
+        fill: #7f9a98;
+      }
+      .panel-title {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-size: 22px;
+        font-weight: 700;
+        fill: #e9f7f2;
+        letter-spacing: -0.028em;
+      }
+      .quote-text {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-size: 15px;
+        font-weight: 400;
+        fill: #cbd6db;
+      }
+      .quote-bold {
+        font-weight: 700;
+        fill: #24f0a7;
+      }
+      .desc-muted {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-size: 13.5px;
+        font-weight: 400;
+        fill: #7f9a98;
+        line-height: 1.5;
+      }
+      .focus-lbl {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        fill: #e9f7f2;
+      }
+      .focus-val {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        fill: #b2c9cb;
+        text-anchor: end;
+      }
+    </style>
+  </defs>
 
-    <text x="36" y="137" font-size="16" fill="#B9C5B4">Computer Science student who enjoys turning ideas into practical software.</text>
-    <text x="36" y="165" font-size="16" fill="#B9C5B4">I explore development, algorithms, and new technologies by building projects</text>
-    <text x="36" y="193" font-size="16" fill="#B9C5B4">that help me learn, solve problems, and get better with every iteration.</text>
+  <!-- =======================================================================
+       PANEL 1: 01 / About me (width: 720px, x: 0)
+       ======================================================================= -->
+  <g transform="translate(0, 0)">
+    <!-- Card Background -->
+    <rect x="1" y="1" width="718" height="318" rx="18" ry="18" fill="rgba(2, 8, 12, 0.84)"/>
+    <rect x="1" y="1" width="718" height="318" rx="18" ry="18" fill="url(#card-grad)"/>
+    <rect x="1" y="1" width="718" height="318" rx="18" ry="18" fill="url(#glass-spec)"/>
 
-    <text x="36" y="222" font-size="12" fill="#9EFF69">BUILD  /  LEARN  /  IMPROVE</text>
-    <text x="1160" y="222" font-size="12" text-anchor="end" fill="#71816B">STATUS: LEARNING</text>
+    <!-- Subtle base border -->
+    <rect x="1" y="1" width="718" height="318" rx="18" ry="18" fill="none"
+          stroke="rgba(57, 255, 121, 0.24)" stroke-width="1.2"/>
+
+    <!-- Content: 01 / About me -->
+    <text x="32" y="46" class="kicker">01 / About me</text>
+    <text x="32" y="80" class="panel-title">Building things, breaking things, learning why.</text>
+
+    <!-- Quote lines with bold accents -->
+    <text x="32" y="122" class="quote-text">
+      I speak fluent <tspan class="quote-bold">C++</tspan>, <tspan class="quote-bold">JavaScript</tspan>, and <tspan class="quote-bold">“why is this working?”</tspan>
+    </text>
+
+    <text x="32" y="156" class="quote-text">
+      Somewhere between <tspan class="quote-bold">“it works”</tspan> and <tspan class="quote-bold">“don't touch that, it works.”</tspan>
+    </text>
+
+    <!-- Multi-line description -->
+    <text x="32" y="210" class="desc-muted">
+      I learn programming by building real projects, chasing bugs,
+    </text>
+    <text x="32" y="234" class="desc-muted">
+      and occasionally discovering that the bug was me.
+    </text>
+  </g>
+
+  <!-- =======================================================================
+       PANEL 2: 02 / Current focus (width: 464px, x: 736)
+       ======================================================================= -->
+  <g transform="translate(736, 0)">
+    <!-- Card Background -->
+    <rect x="1" y="1" width="462" height="318" rx="18" ry="18" fill="rgba(2, 8, 12, 0.84)"/>
+    <rect x="1" y="1" width="462" height="318" rx="18" ry="18" fill="url(#card-grad)"/>
+    <rect x="1" y="1" width="462" height="318" rx="18" ry="18" fill="url(#glass-spec)"/>
+
+    <!-- Subtle base border -->
+    <rect x="1" y="1" width="462" height="318" rx="18" ry="18" fill="none"
+          stroke="rgba(57, 255, 121, 0.24)" stroke-width="1.2"/>
+
+    <!-- Content: 02 / Current focus -->
+    <text x="30" y="46" class="kicker">02 / Current focus</text>
+    <text x="30" y="80" class="panel-title">What I'm building</text>
+
+    <!-- Row 1: Navigation & DSA -->
+    <text x="30" y="128" class="focus-lbl">Navigation &amp; DSA</text>
+    <text x="432" y="128" class="focus-val">LPU Smart Navigator</text>
+    <line x1="30" y1="144" x2="432" y2="144" stroke="rgba(255, 255, 255, 0.06)" stroke-width="1"/>
+
+    <!-- Row 2: Full-stack web -->
+    <text x="30" y="174" class="focus-lbl">Full-stack web</text>
+    <text x="432" y="174" class="focus-val">Next.js / MongoDB</text>
+    <line x1="30" y1="190" x2="432" y2="190" stroke="rgba(255, 255, 255, 0.06)" stroke-width="1"/>
+
+    <!-- Row 3: Automation -->
+    <text x="30" y="220" class="focus-lbl">Automation</text>
+    <text x="432" y="220" class="focus-val">Control systems</text>
+    <line x1="30" y1="236" x2="432" y2="236" stroke="rgba(255, 255, 255, 0.06)" stroke-width="1"/>
+
+    <!-- Row 4: Next up -->
+    <text x="30" y="266" class="focus-lbl">Next up</text>
+    <text x="432" y="266" class="focus-val">Closet Brain</text>
   </g>
 </svg>
